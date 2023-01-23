@@ -1,0 +1,148 @@
+$primary: #5265E1;
+$secondary: #FA5959;
+
+$nav-pills-link-active-bg: $secondary;
+$link-hover-color: $secondary;
+$btn-secondary-color: white;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.nav-link.active:hover{
+background-color: white;
+border: 1px solid $secondary; 
+color: $secondary; 
+
+}
+.btn-primary:hover{
+  background-color: white;
+  color: $primary;
+  border: 1px solid $primary;     
+}
+.btn-secondary{
+  color: white;
+
+}
+.btn-secondary:hover{
+  background-color: white;
+  color: $secondary;
+  border: 1px solid $secondary;     
+}
+
+body{
+  font-size: 14px;
+  color: rgb(72, 70, 70);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4{
+  color: black;
+  font-weight: bold;
+}
+h5{
+  color: white;
+}
+a.nav-link{
+  color: black;
+}
+// imagen superpuesta
+span.first.badge.rounded-pill {
+  width: 140%;
+  height: 75%;
+  top: 30%;
+  left: 30%;
+}
+span.second.badge{
+  width: 110%;
+  height: 75%;
+  top: 30%;
+  right: 30%;
+}
+.img-fluid.position-relative {
+  width: 95%;
+}
+div.container.mt-5 {
+  overflow: hidden;
+}
+//Features-menu
+.nav-pills.justify-content-center {
+  gap: 3rem;
+}
+
+a.f.nav-link.active {
+  border-bottom: 3px solid red;
+  background-color: white;
+  border-radius: 0;
+    &:hover{
+      color: $secondary;
+    }
+}
+a.f.nav-link:hover {
+      color: $secondary;
+}
+
+.container-cards{
+  justify-content: space-around;
+    .card{
+    width: 15rem;
+    position: relative;
+    align-items: center;
+    }
+    &>:nth-child(2){
+     @extend .card;
+     top: 1rem;
+    }
+    &>:nth-child(3){
+    @extend .card;
+    top: 2rem;
+    }
+}
+
+//accordion
+.accordion-button:hover{
+  color: $secondary;
+}
+// formulario
+a.mt-3{
+  color: white;
+}
+//footer
+footer{
+  border: 2px solid black;
+  background-color: #9e9e9e;
+  padding: 0.5rem;
+}
+footer div ul li a.nav-link{
+  color: white;
+}
+.img, svg{
+  margin: 0 1.5rem;
+    &>:hover{
+    fill: #FA5959;
+    }
+}
+
+@media (max-width: 576px){
+  ul.nav.nav-pills{
+    display: block;
+    text-align: center;  
+  }
+  .container-cards{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  div.row.pt-4{
+    flex-direction: column-reverse;
+  }
+  footer{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer div ul.nav{
+    flex-direction: column;
+  }
+};
+
+
+
+
+
